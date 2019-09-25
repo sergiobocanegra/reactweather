@@ -5,7 +5,7 @@ import './styles.css';
 
 const LocationList = ({cities, onSelectedLocation}) =>{ 
 const handleweatherLocationClick = city=>{
-    console.log("Entró al handle....");
+    console.log("Entró al handle.... "+city);
     onSelectedLocation(city);
 }
 const listaLocalidades = cities => (
