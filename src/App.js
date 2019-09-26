@@ -21,7 +21,7 @@ const cities = [
 class App extends Component{
   constructor(){
     super();
-    this.state = {city: "Ciudad desconocida..."};
+    this.state = {city: null};
   }
 
   handleSelectionLocation = city => {
@@ -30,6 +30,7 @@ class App extends Component{
   }
 
   render(){
+    const {city} = this.state;
     return (
       <Grid>
 
@@ -52,7 +53,13 @@ class App extends Component{
           <Col xs={12} md ={6}>
             <Paper>
               <div className="details">
-                <ForecastExtended city={this.state.city}></ForecastExtended>
+                {
+                  // !city ? 
+                  //   <h1>No ha seleccionado una ciudad!!!</h1>:
+                  //   <ForecastExtended city={city}></ForecastExtended>
+
+                  city && <ForecastExtended city={city}></ForecastExtended>
+                }
               </div>
             </Paper>
           </Col>
