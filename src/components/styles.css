@@ -1,12 +1,13 @@
 .locationList {
-    background: red;
+    height: vh;
+    overflow: auto;
+    margin-bottom: 20px;
 }
 
 @media (max-width: 64em){
     .locationList {
-        background: green;
-        max-height: 30vh;
-        overflow: auto;
+        
+        max-height:    40vh;
         margin-bottom: 20px;
     }
 }
